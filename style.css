@@ -1,0 +1,1356 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #fff;
+    color: #333;
+    overflow-x: hidden;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  .logo {
+    font-size: 35px;
+    font-family: "Josefin Sans", sans-serif;
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    
+  }
+  
+  nav ul li a {
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px; 
+    transition: color 0.3s ease;
+  }
+
+  nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #BC4B62;
+    transition: width 0.3s ease;
+  }
+
+  nav ul li a:hover,
+  nav ul li a.active {
+    color: #BC4B62;  /* teks jadi putih saat hover/active */
+  }
+
+  nav ul li a:hover::after {
+    width: 100%;
+  }
+  
+  nav ul li a.active::after {
+    width: 100%;
+}
+
+  .hero {
+    background: url('images/background.jpeg') no-repeat center calc(50% - 60px);
+    background-size: cover;
+    padding-top: 100px;
+    position: relative;
+  }
+  
+  .hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+  }
+  
+  .hero-content .image img {
+    width: 250px;
+    margin-left: 150px;
+    margin-top: 80px;
+    transform: translateY(4px);
+  }
+  
+  .hero-content .text {
+    max-width: 600px;
+    margin-top: 100px;
+  }
+  
+  .hero-content h1 {
+    font-family: "Mochiy Pop One", sans-serif;
+    font-size: 40px;
+    color: #BC4B62;
+    margin-top: 50px;
+    transform: translateX(-80px);
+  }
+  
+  .hero-content p {
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    line-height: 1.6;
+    color: #721629;
+    margin-top: 20px;
+    transform: translateX(-80px);
+    text-align: justify;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #D7687F;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 20px;
+    transform: translateX(-80px);
+  }
+
+  .btn:hover {
+    background-color: #a53d55;
+    transition: all 0.4s ease-in-out;
+  }
+
+/* Celisia World Section */  
+  .celsia-section {
+    background: linear-gradient(to bottom left, #feeaed, #f5f5f5);;
+    text-align: center;
+    padding: 50px 20px;
+    }
+
+  .section-title {
+    font-family: "Mochiy Pop One", sans-serif;
+    font-size: 2.5em;
+    color: #BC4B62;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px #fff(0, 0, 0, 0.2);
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 250px;
+    padding: 15px;
+    transition: transform 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+  .card-img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  .card-text {
+    margin-top: 15px;
+    color: #b23365;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+  }
+
+/* About Section */  
+  .about-section {
+    background-color: #F5C7CE;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .about-title {
+    font-family: "Mochiy Pop One", sans-serif;
+    font-size: 2.5em;
+    color: #BC4B62;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    position: relative;
+  }
+
+  .circle-wrapper {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 50px auto;
+  }
+
+  .circle {
+    position: absolute;
+    width: 262px;
+    height: 187px;
+    border: 1.5px solid #721629;
+    border-radius: 50%;
+    background-color: transparent;
+  }
+
+  .circle1 {
+    transform: rotate(15deg);
+    left: 10px;
+    top: 10px;
+  }
+
+  .circle2 {
+    transform: rotate(-25deg);
+    left: 10px;
+    top: 10px;
+  }
+
+  .circle-text {
+    position: absolute;
+    top: 35%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #721629;
+    font-size: 1.8rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+  }
+
+  .photo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 400px;
+  }
+
+  .about-photo {
+    width: 375px;
+    height: auto;
+    object-fit: contain;
+    order: 2;
+    margin-bottom: -50px;
+    position: relative;
+  }
+
+   .circle-wrapper2 {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 50px auto;
+  }
+  
+  .circleright {
+    position: absolute;
+    width: 362px;
+    height: 287px;
+    border: 1.5px solid #721629;
+    border-radius: 70%;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: transparent;
+  }
+
+   .circle12 {
+    transform: rotate(10deg);
+    left: 850px;
+    top: 70px;
+  }
+
+  .circle22 {
+    transform: rotate(-10deg);
+    left: 850px;
+    top: 70px;
+  }
+
+  .circle-text2 {
+    position: absolute;
+    top: 55%;
+    left: 84%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    color: #721629;
+    font-size: 1.2em;
+    line-height: 1.4;
+  }
+  
+/* Gallery Section */  
+  .gallery-section {
+    background: linear-gradient(to bottom left, #feeaed, #f5f5f5);;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .gallery-title {
+    font-family: "Mochiy Pop One", sans-serif;
+    font-size: 2.5em;
+    color: #BC4B62;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .gallery-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin-bottom: 30px;
+  padding: 0 30px;
+  }
+
+  .gallery-row img {
+  width: 100%;
+  height: 200px;
+  max-height: 300px;
+  border-radius: 0px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .gallery-row img:hover {
+    transform: scale(1.05);
+  }
+
+/* Tambahkan geser untuk efek zig-zag */
+  .row-top {
+  margin-left: 220px;  /* geser kanan */
+  }
+
+  .row-bottom {
+  margin-right: 80px; /* geser kiri */
+  }
+
+/* Blog Journey Section */
+ .blog-container {
+    background: #F5C7CE;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .blog-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 4px 5px 8px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    width: 360px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: transform 0.3s ease;
+  }
+
+  .blog-card1 {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 4px 5px 8px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    width: 360px;
+    height: 450px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 125px;
+    transition: transform 0.3s ease;
+  }
+
+  .blog-card2 {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 4px 5px 8px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    width: 360px;
+    height: 450px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 125px;
+    transition: transform 0.3s ease;
+  }
+
+  .blog-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .blog-card1:hover {
+    transform: translateY(-5px);
+  }
+
+  .blog-card2:hover {
+    transform: translateY(-5px);
+  }
+
+  .blog-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+  }
+
+  .blog-meta {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .blog-title {
+    font-family: "Mochiy Pop One", sans-serif;
+    text-align: center;
+    font-size: 2.5em;
+    color: #BC4B62;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .blog-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+  }
+
+  .blog-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+  }
+
+  .blog-footer {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #777;
+  }
+
+  .blog-footer button {
+    border: 1px solid #ccc;
+    background: transparent;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .blog-footer button:hover {
+    background: #eee;
+  }
+  
+  .card-content {
+    padding: 20px;
+    font-size: 14px;
+  }
+  
+  .card-content .time {
+    font-family: 'Poppins', sans-serif;
+    color: #777;
+    margin-bottom: 5px;
+    font-size: 13px;
+  }
+  
+  .card-content h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .author-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+  .author-footer button {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .author-footer button:hover {
+    background-color: #fce4ec;
+  }
+  
+  .highlight {
+    transform: scale(1.05);
+    z-index: 1;
+  }
+
+/* ResinLab Section */
+  .resinlab-section {
+    background: linear-gradient(to bottom left, #feeaed, #f5f5f5);
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .resinlab-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .resinlab-text {
+    max-width: 500px;
+  }
+
+  .resinlab-brand {
+    font-family: "Mochiy Pop One", sans-serif;
+    text-align: center;
+    font-size: 2.5em;
+    color: #BC4B62;
+    margin-bottom: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .resinlab-title {
+    font-family: "Mochiy Pop One", sans-serif;
+    font-size: 2em;
+    color: #BC4B62;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: left;
+    margin-top: 50px;
+    line-height: 1.3;
+  } 
+
+  .resinlab-description{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #721629;
+    line-height: 1.6;
+    margin-top: 20px;
+    text-align: left;
+  }
+
+  .resinlab-image {
+    display: flex;
+    justify-content: center; /* Untuk posisi tengah */
+    align-items: center;
+    padding: 10px;
+  }
+
+  .img-combined {
+    max-width: 100%;
+    max-height: 600px;
+    height: auto;
+    border-radius: 8px; /* Opsional: sudut membulat */
+  }
+
+
+/* About Page Section */
+  .hero-about {
+    padding: 100px 60px;
+    position: relative;
+    background-image: url('images/background.jpeg');
+    background-repeat: no-repeat;
+    background-position: center calc(50% - 60px);
+    background-size: cover;
+    height: 760px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .about-header {
+    font-family: "Mochiy Pop One", sans-serif;
+    color: #BC4B62;
+    font-size: 2.5em;
+    text-transform: none;
+    margin-top: 200px;
+  }
+
+  .breadcrumb {
+    font-weight: 600;
+    color: #AB485D;
+    margin-bottom: 40px;
+  }
+
+  .intro-section {
+    background: linear-gradient(to bottom left, #feeaed, #f5f5f5);;
+    padding: 50px 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    text-align: center;
+    position: relative;
+  }
+
+  .intro-section h2 {
+    font-family: "Mochiy Pop One", sans-serif;
+    color: #BC4B62;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+
+  .intro-section p {
+    font-family: 'Poppins', sans-serif;
+    color: #721629;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin: 0 auto 15px;
+    max-width: 800px;
+  }
+
+  .intro-section .signature {
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    color: #721629;
+    margin-top: 25px;
+  }
+
+  .about-section2 {
+    background-color: #F5C7CE;
+    text-align: center;
+    padding: 50px 20px;
+  }
+
+  .about-wrapper {
+    background-color: #f8c8d0;
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; /* biar responsive */
+    text-align: left;
+  }
+
+  .about-image img {
+    width: 400px;
+    height: auto;
+    object-fit: contain;
+    order: 2;
+    margin-bottom: -105px;
+    position: relative;
+  }
+
+  .about-text {
+    max-width: 500px;
+    color: #721629;
+    line-height: 1.6;
+  }
+
+  .about-text p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    line-height: 1.7;
+    text-align: center;
+  }
+
+  .why-section {
+    background-color: #fefcfd;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 32px;
+    color: #BC4B62;
+    font-weight: bold;
+    margin-bottom: 50px;
+  }
+
+  .why-section {
+    padding: 60px 20px;
+    background: linear-gradient(to bottom left, #feeaed, #f5f5f5);;
+    text-align: center;
+  }
+
+  .section-title {
+    font-family: "Mochiy Pop One", sans-serif;
+    color: #BC4B62;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+  }
+
+  .feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    margin: 40px;
+    border-radius: 16px;
+  }
+
+  .feature-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Supaya tetap responsif */
+  }
+
+  .image-box {
+    background-color: #ffffff;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 12px; /* Membulatkan sudut */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    overflow: hidden;
+  }
+
+  .image-box img {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .text-box {
+    background-color: #F5C7CE;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    width: 100%;
+    height: 220px;
+    box-sizing: border-box;
+  }
+
+  .text-box h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #BC4B62;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .text-box p {
+    font-family: 'Poppins', sans-serif;
+    color: #721629;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* Gallery Page Section */
+  .gallery-section {
+    background: linear-gradient(to bottom left, #feeaed, #f5f5f5);;
+    padding: 60px 20px;
+  }
+
+  .gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .gallery-text {
+    flex: 1 1 300px;
+    max-width: 500px;
+  }
+
+  .gallery-text h2 {
+    font-family: "Mochiy Pop One", sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    color: #BC4B62;
+    margin-bottom: 40px;
+    line-height: 1.3;
+    text-align: left;
+  }
+
+  .gallery-text p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    color: #721629;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  .gallery-images {
+    position: relative;
+    flex: 1 1 300px;
+    max-width: 600px;
+    height: px;
+  }
+
+  .gallery-images img {
+    position: relative;
+    width: 400px;
+  }
+
+  .collection-section {
+    background-color: #F5C7CE;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .collection-title {
+    font-family: "Mochiy Pop One", sans-serif;
+    font-size: 50px;
+    color: #BC4B62;
+    font-weight: bold;
+    margin-bottom: 80px;
+  }
+
+  .collection-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .item {
+    background-color: #FEEAED;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item2 {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item img {
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+  }
+
+  .item.with-text .item-text {
+    font-family: 'Poppins', sans-serif;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .item-text h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #BC4B62;
+    margin: 0 0 8px 0;
+  }
+
+  .item-text p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #721629;
+    margin: 4px 0;
+    line-height: 1.5;
+  }
+
+/* Category Section */
+  .category-section {
+    background: linear-gradient(to bottom right, #feeaed, #fdfdfd);
+    padding: 60px 30px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+  }
+
+  .category-title {
+    text-align: center;
+    font-family: "Mochiy Pop One", sans-serif;
+    font-size: 2.8em;
+    color: #BC4B62;
+    margin-bottom: 110px;
+  }
+
+  .category-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  .category-item img {
+    flex: 1 1 300px;
+    max-width: 300px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .category-text {
+    flex: 2;
+  }
+
+  .category-text h3 {
+    font-family: "Mochiy Pop One", sans-serif;
+    color: #BC4B62;
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .category-text p {
+    font-family: 'Poppins', sans-serif;
+    color: #721629;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .btn-more {
+    display: inline-block;
+    background-color: #F2ADB7;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-more:hover {
+    background-color: #BC4B62;
+  }
+
+  /* Garis pemisah antar kategori */
+  .category-section hr {
+    border: 0;
+    height: 1px;
+    background: #AB485D;
+    opacity: 0.3;
+    margin: 20px 0;
+  }
+
+/* Article Section */
+  .blog-container2 {
+    background: linear-gradient(to bottom right, #feeaed, #fdfdfd);
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .articles-section {
+    background-color: #F5C7CE;
+    padding: 60px 30px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .articles-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #BC4B62;
+    font-family: "Mochiy Pop One", sans-serif;
+    margin-bottom: 40px;
+  }
+
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+  }
+
+  .article-card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 4px 5px 8px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+  }
+
+  .article-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .article-card img {
+    padding: 20px;
+    width: 100%;
+    height: auto;
+  }
+
+  .article-content {
+    padding: 20px;
+  }
+
+  .article-time {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 10px;
+  }
+
+  .article-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .article-text {
+    font-family: Poppins, sans-serif;
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    text-align: justify;
+  }
+
+  .article-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+    color: #444;
+  }
+
+  .btn-read {
+    padding: 6px 12px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background 0.3s ease;
+  }
+
+  .btn-read:hover {
+    background-color: #dad8d8;
+  } 
+
+/* Hero Resin Lab Section */
+  .heroresinlab {
+    background: linear-gradient(to bottom right, #feeaed, #fdfdfd);
+    padding: 10px 30px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .heroresinlab-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+
+  .heroresinlab-image img {
+    max-width: 550px;
+    height: auto;
+    transform: translateX(-80px);
+    margin-top: 80px;
+  } 
+
+  .heroresinlab-text {
+    max-width: 500px;
+  }
+
+  .heroresinlab-text h1 {
+    font-size: 45px;
+    color: #BC4B62;
+    font-weight: bold;
+    font-family: 'Mochiy Pop One', sans-serif;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    text-align: center;
+    transform: translateX(-35px);
+  }
+
+  .heroresinlab-text p {
+    font-size: 23px;
+    color: #721629;
+    line-height: 1.7;
+    text-align: center;
+    transform: translateX(-35px);
+  }
+
+/* DIY Project Section */
+  .diyprojects {
+    background-color: #F5C7CE;
+    padding: 80px 50px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .diyprojects h2 {
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-size: 2.5em;
+    color: #BC4B62;
+    text-align: center;
+    margin-bottom: 90px;
+  }
+
+  .diy-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FEEAED;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    gap: 20px;
+  }
+
+  .diy-card.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .diy-card img {
+    width: auto;
+    max-height: 350px;
+    object-fit: cover;
+    max-width: 45%;
+  }
+
+  .diy-content {
+    padding: 30px;
+    width: 60%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .diy-content h3 {
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: #BC4B62;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .diy-content p {
+    font-family: Poppins, sans-serif;
+    color: #721629;
+    line-height: 1.6;
+    font-size: 1em;
+    margin-bottom: 15px;
+  }
+
+  .diy-content button {
+    background-color: #F2ADB7;
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background 0.3s ease;
+  }
+
+  .diy-content button:hover {
+    background-color: #BC4B62;
+  }
+
+  .diyprojects hr {
+    border: 0;
+    height: 1px;
+    background: #AB485D;
+    opacity: 0.3;
+    margin: 20px 0;
+  }
+
+/* Handmade Section */
+  .handmade-section {
+    padding: 60px 30px;
+    background: linear-gradient(to bottom right, #feeaed, #fdfdfd);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+  }
+
+  .handmade-section h2 {
+    font-size: 2.5em;
+    color: #BC4B62;
+    font-family: 'Mochiy Pop One', sans-serif;
+    margin-bottom: 90px;
+  }
+
+  .handmade-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .handmade-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 4px 5px 8px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    transition: transform 0.3s ease;
+  } 
+
+  .handmade-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .handmade-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+
+  .handmade-card p {
+    font-weight: 600;
+    font-size: 1em;
+    color: #BC4B62;
+    line-height: 1.4;
+  }
+
+/* Footer Section */
+  .footer {
+    background-color: #F9B3BD;
+    color: #BC4B62;
+    padding: 60px 30px;
+    font-family: sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  
+  .footer-about {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .footer-brand {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-desc {
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    color: #A35364;
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  
+  .footer-socials a {
+    margin-right: 10px;
+  }
+  
+  .footer-socials img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .footer-links,
+  .footer-info {
+    min-width: 180px;
+  }
+  
+  .footer-links h3,
+  .footer-info h3 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .footer-links ul,
+  .footer-info ul {
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links ul li,
+  .footer-info ul li {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 8px;
+  }
+  
+  .footer-links a,
+  .footer-info a {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: #AB485D;
+  }
+  
+  .footer-info .contact-info li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+  }
+  
+  .footer-info .contact-info img {
+    width: 30px;
+  }
+  
+  hr {
+    margin: 30px 0 10px;
+    border: none;
+    border-top: 1px solid #AB485D;
+  }
+  
+  footer p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    text-align: center;
+  }
+
